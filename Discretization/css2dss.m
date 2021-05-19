@@ -1,0 +1,10 @@
+% Discretization of linear state space models
+function [Ad, Bd, Cd, Dd] = css2dss(Ac, Bc, Cc, Dc, Ts)
+    n = size(Ac)
+    DOF = n(1)/2
+
+    Ad = expm(Ac .* Ts)
+    Bd = Ac^(-1) * (Ad-eye(2*DOF)) * Bc
+    Cd = Cc
+    Dd = Dc
+end

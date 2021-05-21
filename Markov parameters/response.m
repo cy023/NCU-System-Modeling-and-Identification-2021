@@ -1,17 +1,22 @@
 % Markov Parameters
-function Y = response(A, B, C, D, u)
-    DOF = size(A,1)/2
-    
-    C = [eye(DOF) zeros(DOF); zeros(DOF) zeros(DOF)];
-    y = zeros(2*DOF, size(u,2));
-    for t = 1 : size(u,2)
-        if (t == 1)
-            y(:,t) = zeros(2*DOF,1);
+function yn = response(A, B, C, D, u)
+    q   = size(u,1);    % number of output
+    m   = size(u,1);    % number of input
+    L   = size(u,2);    % number of sampLe
+
+    Y = zeros([q, m*L]);
+    U = zeros([m*L, L]);
+
+    % Initial matrix Y and U.
+    step = 1;
+    while step < m*L
+        if step == 1
+            Y(:, step:step+m-1) = D;
         else
-            for i = 1 : (t-1)
-                y(:,t) = y(:,t) + C * A^(i-1) * B * u(:,t-i);
-            end
+            Y(:, step:step+m-1) = C * (A^(((step-1)/m+1)-2)) * B;
         end
+        U(step:step+m-1, ((step-1)/m+1):L) = u(:, 1:L+1-((step-1)/m+1));
+        step = step + m;
     end
-    Y = y(1:2,:);
+    yn = Y * U;
 end

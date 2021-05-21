@@ -15,10 +15,10 @@ Ts = 1
 [Ad, Bd, Cd, Dd] = css2dss(Ac, Bc, Cc, Dc, Ts)
 
 %% 
-u_impulse = zeros(DOF,300);
+u_impulse = zeros(DOF, 300);
 u_impulse(:,1) = 1;
 
-y_impulse = response(Ad, Bd, Cd, Dd, u_impulse)
+y_impulse = response(Ad, Bd, Cd, Dd, u_impulse);
 
 figure(1)
 subplot(2,1,1)

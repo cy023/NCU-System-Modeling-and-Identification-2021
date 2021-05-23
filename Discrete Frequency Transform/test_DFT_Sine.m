@@ -7,7 +7,6 @@ L  = 1000;
 
 sin_period = [10, 10.25, 10.5, 100, 100.25, 100.5];
 sin_freq   = 1 ./ sin_period
-sin_dot    = ones(size(sin_period, 2), L);
 
 u     = zeros([1, L]);
 fft_u = zeros([size(sin_period, 2), L]);

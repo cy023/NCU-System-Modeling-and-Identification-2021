@@ -1,4 +1,4 @@
-clc; clear all; close all;
+clc; clear; close all;
 addpath("D:\Project\SysID\System Modeling")
 addpath("D:\Project\SysID\Discretization")
 addpath("D:\Project\SysID\Markov parameters")

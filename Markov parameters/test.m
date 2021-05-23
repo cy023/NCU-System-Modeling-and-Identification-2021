@@ -1,4 +1,4 @@
-clc; clear all;
+clc; clear; close all;
 addpath("D:\Project\SysID\System Modeling")
 addpath("D:\Project\SysID\Discretization")
 

@@ -1,4 +1,4 @@
-clear all; clc;
+clc; clear; close all;
 addpath("D:\Project\SysID\System Modeling")
 
 %% Transform the spring-mass-damper system to the state-space matrix form

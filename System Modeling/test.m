@@ -1,4 +1,4 @@
-clear all; clc;
+clc; clear; close all;
 
 % Determine the model
 DOF = 3;

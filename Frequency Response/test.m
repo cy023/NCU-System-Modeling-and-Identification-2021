@@ -1,4 +1,4 @@
-clc; clear all; close all;
+clc; clear; close all;
 addpath("D:\Project\SysID\System Modeling")
 addpath("D:\Project\SysID\Discretization")
 
@@ -31,7 +31,7 @@ x = linspace(0, (L / (fs/f)) * 2*pi, L);
 u_1sin = zeros([DOF, L]);
 u_2sin = zeros([DOF, L]);
 u_1sin(1,:) = sin(x);
-u_2sin(2,:) = sin(x);    
+u_2sin(2,:) = sin(x);
 
 y_1sin = sinusoidal_response(Ad, Bd, Cd, Dd, u_1sin);
 y_2sin = sinusoidal_response(Ad, Bd, Cd, Dd, u_2sin);

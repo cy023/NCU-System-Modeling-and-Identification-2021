@@ -1,8 +1,8 @@
 % Markov Parameters
 function yn = response(A, B, C, D, u)
-    q   = size(u,1);    % number of output
-    m   = size(u,1);    % number of input
-    L   = size(u,2);    % number of sampLe
+    q = size(u,1);  % number of output
+    m = size(u,1);  % number of input
+    L = size(u,2);  % number of sampLe
 
     Y = zeros([q, m*L]);
     U = zeros([m*L, L]);

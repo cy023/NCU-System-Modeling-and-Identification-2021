@@ -1,12 +1,10 @@
 % Markov Parameters
-function yn = response(A, B, C, D, u)
+function [Y, yn] = responseWithNoise(A, B, C, D, u)
     q = size(u,1);  % number of output
     m = size(u,1);  % number of input
     L = size(u,2);  % number of sampLe
 
     Y = zeros([q, m*L]);
-    U = zeros([m*L, L]);
-    noise  = zeros([2, L]);
     noiseU = zeros([m*L, L]);
 
     % Initial matrix Y and U.
@@ -18,9 +16,7 @@ function yn = response(A, B, C, D, u)
         else
             Y(:, step:step+m-1) = C * (A^(i-2)) * B;
         end
-        noiseU(step:step+m-1, i) = rand([2, 1]) * 10;
-        U(step:step+m-1, i:L)    = u(:, 1:L+1-i);
-        noise(:, i)              = noiseU(step:step+m-1, i);
+        noiseU(step:step+m-1, i) = u(:, i);
         step = step + m;
         i = i + 1;
     end

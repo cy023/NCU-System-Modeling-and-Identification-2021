@@ -26,6 +26,7 @@ y_impulse = response(Ad, Bd, Cd, Dd, u_impulse);
 %% In Time Domain
 t = linspace(0, L*Ts, L);
 figure(1);
+subplot(2,1,1);
 title("Weighted sequence in time domain");
 plot(t, y_impulse(1, :)); hold on
 plot(t, y_impulse(2, :)); hold off
@@ -39,7 +40,7 @@ Y2_fft = abs(fft(y_impulse(2,:)));
 Y_am1 = Y1_fft(1, 1:L/2);
 Y_am2 = Y2_fft(1, 1:L/2);
 
-figure(2);
+subplot(2,1,2);
 freq = linspace(0, fs/2, L/2);
 title("Weighted sequence after FFT");
 plot(freq, Y_am1); hold on

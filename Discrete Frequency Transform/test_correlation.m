@@ -69,20 +69,20 @@ Sn1n2 = abs(fft(Rn1n2));
 Sns   = abs(fft(Rns));
 Ss1s2 = abs(fft(Rs1s2));
 
-x_freq = linspace(0, fs/2, N/2);
-x_time = linspace(0, Ts*N, N);
+freq = linspace(0, fs/2, N/2);
+time = linspace(0, Ts*N, N);
 
 %%
 figure(3);
 subplot(2,1,1);
-plot(x_time, Rnn);
+plot(time, Rnn);
 grid on;
 xlabel("Time (s)");
 ylabel("Amplitude");
 title("Circular correlation R_{nn}");
 
 subplot(2,1,2);
-plot(x_freq, Snn(1, 1:N/2));
+plot(freq, Snn(1, 1:N/2));
 grid on;
 xlabel("Frequency (Hz)");
 ylabel("Amplitude");
@@ -91,13 +91,13 @@ title("Circular correlation density spectrum S_{nn}");
 %%
 figure();
 subplot(2,1,1);
-plot(x_time, Rss);
+plot(time, Rss);
 grid on;
 xlabel("Time (s)");
 title("Circular correlation R_{ss}");
 
 subplot(2,1,2);
-plot(x_freq, Sss(1, 1:N/2));
+plot(freq, Sss(1, 1:N/2));
 grid on;
 xlabel("Frequency (Hz)");
 ylabel("Amplitude");
@@ -106,13 +106,13 @@ title("Circular correlation density spectrum S_{ss}");
 %%
 figure();
 subplot(2,1,1);
-plot(x_time, Rn1n2);
+plot(time, Rn1n2);
 grid on;
 xlabel("Time (s)");
 title("Circular correlation R_{n1n2}");
 
 subplot(2,1,2);
-plot(x_freq, Sn1n2(1, 1:N/2));
+plot(freq, Sn1n2(1, 1:N/2));
 grid on;
 xlabel("Frequency (Hz)");
 ylabel("Amplitude");
@@ -121,13 +121,13 @@ title("Circular correlation density spectrum S_{n1n2}");
 %%
 figure();
 subplot(2,1,1);
-plot(x_time, Rns);
+plot(time, Rns);
 grid on;
 xlabel("Time (s)");
 title("Circular correlation R_{ns}");
 
 subplot(2,1,2);
-plot(x_freq, Sns(1, 1:N/2));
+plot(freq, Sns(1, 1:N/2));
 grid on;
 xlabel("Frequency (Hz)");
 ylabel("Amplitude");
@@ -136,13 +136,13 @@ title("Circular correlation density spectrum S_{ns}");
 %%
 figure();
 subplot(2,1,1);
-plot(x_time, Rs1s2);
+plot(time, Rs1s2);
 grid on;
 xlabel("Time (s)");
 title("Circular correlation R_{s1s2}");
 
 subplot(2,1,2);
-plot(x_freq, Ss1s2(1, 1:N/2));
+plot(freq, Ss1s2(1, 1:N/2));
 grid on;
 xlabel("Frequency (Hz)");
 ylabel("Amplitude");

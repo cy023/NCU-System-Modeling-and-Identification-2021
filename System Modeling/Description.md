@@ -1,3 +1,0 @@
-# Mass-spring-damper model
-
-TODO...

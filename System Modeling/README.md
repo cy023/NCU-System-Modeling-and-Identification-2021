@@ -1,4 +1,5 @@
-# Mass-spring-damper model
+# System Modeling
+Models for multiple degree of freedom mass-spring-damper system.
 
 ## DOF = 1
 - System variables
@@ -63,3 +64,5 @@
     \end{bmatrix} + 
     0u(t)
     $$
+
+## ...

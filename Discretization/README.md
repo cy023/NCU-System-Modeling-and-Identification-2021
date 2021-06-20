@@ -2,6 +2,8 @@
 Transfer a continuous time state space to discrete time state space.
 
 ## Formula
+- Reference : [Discretization](https://en.wikipedia.org/wiki/Discretization)
+
 $$
 \begin{cases}
   A_d = A_c e^{A_c\Delta t} \\

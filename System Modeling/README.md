@@ -1,7 +1,7 @@
 # System Modeling
 Models for multiple degree of freedom mass-spring-damper system.
-
-## DOF = 1
+![](https://i.imgur.com/q8cxkBy.png =80%x)
+## Derivation of one degree of freedom
 - System variables
 
     $$x_1(t) = y(t) \\
@@ -65,4 +65,6 @@ Models for multiple degree of freedom mass-spring-damper system.
     0u(t)
     $$
 
-## ...
+## Derivation of two degree of freedom
+
+## Derivation of three degree of freedom

@@ -1,6 +1,6 @@
 # System Modeling
 Models for multiple degree of freedom mass-spring-damper system.
-![](https://i.imgur.com/q8cxkBy.png =80%x)
+![](https://i.imgur.com/q8cxkBy.png)
 ## Derivation of one degree of freedom
 - System variables
 
